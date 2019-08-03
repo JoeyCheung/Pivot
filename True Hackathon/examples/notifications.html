@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Hackathon
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <script>
+    let data1;
+    let data2;
+
+    function loadJSON(callback) {
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', 'test.json', false) // Replace 'my_data' with the path to your file
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+              callback(xobj.responseText);
+            }
+        };
+        xobj.send(null);
+    }
+
+    function init() {
+    loadJSON(function(response) {
+      // Parse JSON string into object
+        data1 = (JSON.parse(response));
+        data2 = (JSON.parse(response));
+    });
+    }
+
+    init();
+
+    for (let i = 0; i < data1.length; i++) {
+      console.log(data1[i]);
+    }
+  </script>
+</head>
+
+<body class=" ">
+  <div class="wrapper ">
+    <div class="sidebar navbarColor ">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+    <div class="sidebar-wrapper navbarColor">
+        <div class="logo">
+          <a class="simple-text logo-mini">
+          </a>
+          <a class="simple-text logo-normal">
+            Campaigns
+          </a>
+        </div>
+        <ul class="nav">
+          <li class="active ">
+            <a>
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Apple Inc.</p>
+            </a>
+          </li>
+          <li>
+            <a href="./icons.html">
+              <i class="tim-icons icon-atom"></i>
+              <p>Ford's Company</p>
+            </a>
+          </li>
+          <li>
+            <a href="./map.html">
+              <i class="tim-icons icon-pin"></i>
+              <p>NABISCO</p>
+            </a>
+          </li>
+          <li>
+            <a href="./notifications.html">
+              <i class="tim-icons icon-bell-55"></i>
+              <p>JP Morgan</p>
+            </a>
+          </li>
+          <li>
+            <a href="./user.html">
+              <i class="tim-icons icon-single-02"></i>
+              <p>Apple Inc.</p>
+            </a>
+          </li>
+          <li>
+            <a href="./tables.html">
+              <i class="tim-icons icon-puzzle-10"></i>
+              <p>Ford's Company</p>
+            </a>
+          </li>
+          <li>
+            <a href="./typography.html">
+              <i class="tim-icons icon-align-center"></i>
+              <p>Nabisco</p>
+            </a>
+          </li>
+          <li>
+            <a href="./rtl.html">
+              <i class="tim-icons icon-world"></i>
+              <p>JP Morgan</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent   ">
+          <div class="container-fluid">
+            <div class="navbar-wrapper">
+              <a class="navbar-brand" margin href="" style="font-size: 28px color="><font color = "black" size="6"> P I V O T </font></a>
+            </div>
+            <h5>Welcome Billy Bob! | <a href="/index.html">Dashboard</a> | <a href="./examples/notifications.html">Feedback </a>| <a href="https://www.google.com">Sign Out</a></h5>
+          </div>
+        </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Top concerns</h4>
+              </div>
+              <div class="card-body">
+                <div class="alert alert-info">
+                  <button type="button" aria-hidden="true" class="close" onclick="helper()">
+                  </button>
+                  <span>Platform, disappointed, leave</span>
+                </div>
+                <div class="alert alert-info">
+                  <button type="button" aria-hidden="true" class="close" onclick="helper()">
+                  </button>
+                  <span>Notification, ridiculous, sign</span>
+                </div>
+                <div class="alert alert-info">
+                  <button type="button" aria-hidden="true" class="close" onclick="helper()">
+                  </button>
+                  <span>Horrible, confirm, trouble</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Top compliments</h4>
+              </div>
+              <div class="card-body">
+                <div class="alert alert-info">
+                  <button type="button" aria-hidden="true" class="close" onclick="helper()">
+                  </button>
+                  <span>Increase, button, browser</span>
+                </div>
+                <div class="alert alert-info">
+                  <button type="button" aria-hidden="true" class="close" onclick="helper()">
+                  </button>
+                  <span>Value, share, conversation</span>
+                </div>
+                <div class="alert alert-info">
+                  <button type="button" aria-hidden="true" class="close" onclick="helper()">
+                  </button>
+                  <span>Easy, search, cost</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <p class="text-muted" id="text1" style="display: none">
+                  "I don't find quotes and data for interest rate FUTURES. Other futures quotes seem to me diminished as well. Symbols that were previously valid to retrieve FUTURES quotes now don't work. From: hrrcpa@earthlink.net Logged In: Yes Name: H. Rudolf Reckmann":"sub receiving an email that they need to update the credit card but there is no problem with the credit card and it is already updated","I am unable to locate the historical LIBOR information. How can we do that? From: billv@noah-housing.org Logged In: Yes Name: Bill Vanvliet":"10 year charts for asia markets not available or not working. Malaysian stocks charts not working. Please retify.Thanks. From: Kanesonkupp@gmail.com Logged In: No Name: Kaneson","I sign in to my account. When I close chrome and open back up, I have to sign in to my account again. My account was never like this before. Every time I'd open Chrome my log in home page is WSJ and I was always signed in, now, I have to constantlykeep signing back in":"I did not receive my paper at least 4 x this past 6 weeks or thereabouts. I emailed Customer Service with the return message such as a member of our crack team will be in contact. Please delete this autoreply since no one ever follows through and the reply is an insult to my subscription. msg#6598265","I RECEIVED A WET NEWSPAPER TWICE THIS WEEK. tWO ISSUES: 1) THE PAPER IS NOT PROPERLY WRAPPED IN THE PLASTIC BAG, EFFECTIVELY WASTING ONE OF THE BAGS. 2) iT'S AS IF THE DELIVERY PERSON DELIBERATLY FINDS THE AREA OF MY DRIVEWAY WHERE WATER COLLECTS IN A RAINSTORM TO DROP THE PAPER. I'VE ATTEMPTED TO COMMUNICATE THIS ISSUE DIRECTLY TO YOUR DELIVERY PERSON(HE SENDS A CHRISTMAS CARD TO GET CHRISTMAS TIPS, NO DOUBT) TO NO AVAIL. i DON'T THINK YOU CAN FIND A WORSE DELIVERY SERVICE. HE DOES'T DESERVE THE JOB, LET ALONE ANY MORE CHRISTMAS TIPS!!!":"Hi, the new watchlist feature does not allow for exporting to excel. This makes the watchlist of limited value. Why not have a simple export to csv option. From: andrew.starkey@outlook.com Logged In: Yes Name: A Star","The Stock Market Diary never posted the June 13 data. It is still showing June 12. Please post yesterday's data ASAP. From: agigante@nyc.rr.com Logged In: Yes Name: Alexander Gigante":"I got this email from you. I have participated in other Barron's Survey's focused on the print magazine and website. After doing this survey, I felt like this survey was completely different. Questions were much more personal in nature and potentially invasive and for purposes of marketing to me versus helping make your products better. If the purpose of this survey was to gather information that will be used to market products to me on a personal basis, then please have all the data responses stricken from your databases. Please confirm in a response. Thank you."
+                </p>
+                <p class="text-muted" id="text2" style="display: none">
+                  Other futures quotes seem to me diminished as well. Symbols that were previously valid to retrieve FUTURES quotes now don't work. From: hrrcpa@earthlink.net Logged In: Yes Name: H. Rudolf Reckmann":"sub receiving an email that they need to update the credit card but there is no problem with the credit card and it is already updated","I am unable to locate the historical LIBOR information. How can we do that? From: billv@noah-housing.org Logged In: Yes Name: Bill Vanvliet":"10 year charts for asia markets not available or not working. Malaysian stocks charts not working. Please retify.Thanks. From: Kanesonkupp@gmail.com Logged In: No Name: Kaneson","I sign in to my account. When I close chrome and open back up, I have to sign in to my account again. My account was never like this before. Every time I'd open Chrome my log in home page is WSJ and I was always signed in, now, I have to constantlykeep signing back in":"I did not receive my paper at least 4 x this past 6 weeks or thereabouts. I emailed Customer Service with the return message such as a member of our crack team will be in contact. Please delete this autoreply since no one ever follows through and the reply is an insult to my subscription. msg#6598265","I RECEIVED A WET NEWSPAPER TWICE THIS WEEK. tWO ISSUES: 1) THE PAPER IS NOT PROPERLY WRAPPED IN THE PLASTIC BAG, EFFECTIVELY WASTING ONE OF THE BAGS. 2) iT'S AS IF THE DELIVERY PERSON DELIBERATLY FINDS THE AREA OF MY DRIVEWAY WHERE WATER COLLECTS IN A RAINSTORM TO DROP THE PAPER. I'VE ATTEMPTED TO COMMUNICATE THIS ISSUE DIRECTLY TO YOUR DELIVERY PERSON(HE SENDS A CHRISTMAS CARD TO GET CHRISTMAS TIPS, NO DOUBT) TO NO AVAIL. i DON'T THINK YOU CAN FIND A WORSE DELIVERY SERVICE. HE DOES'T DESERVE THE JOB, LET ALONE ANY MORE CHRISTMAS TIPS!!!":"Hi, the new watchlist feature does not allow for exporting to excel. This makes the watchlist of limited value. Why not have a simple export to csv option. From: andrew.starkey@outlook.com Logged In: Yes Name: A Star","The Stock Market Diary never posted the June 13 data. It is still showing June 12. Please post yesterday's data ASAP. From: agigante@nyc.rr.com Logged In: Yes Name: Alexander Gigante":"I got this email from you. I have participated in other Barron's Survey's focused on the print magazine and website. After doing this survey, I felt like this survey was completely different. Questions were much more personal in nature and potentially invasive and for purposes of marketing to me versus helping make your products better. If the purpose of this survey was to gather information that will be used to market products to me on a personal basis, then please have all the data responses stricken from your databases. Please confirm in a response. Thank you."
+                </p>
+                <p class="text-muted" id="text3" style="display: none">
+                 "Symbols that were previously valid to retrieve FUTURES quotes now don't work. From: hrrcpa@earthlink.net Logged In: Yes Name: H. Rudolf Reckmann":"sub receiving an email that they need to update the credit card but there is no problem with the credit card and it is already updated","I am unable to locate the historical LIBOR information. How can we do that? From: billv@noah-housing.org Logged In: Yes Name: Bill Vanvliet":"10 year charts for asia markets not available or not working. Malaysian stocks charts not working. Please retify.Thanks. From: Kanesonkupp@gmail.com Logged In: No Name: Kaneson","I sign in to my account. When I close chrome and open back up, I have to sign in to my account again. My account was never like this before. Every time I'd open Chrome my log in home page is WSJ and I was always signed in, now, I have to constantlykeep signing back in":"I did not receive my paper at least 4 x this past 6 weeks or thereabouts. I emailed Customer Service with the return message such as a member of our crack team will be in contact. Please delete this autoreply since no one ever follows through and the reply is an insult to my subscription. msg#6598265","I RECEIVED A WET NEWSPAPER TWICE THIS WEEK. tWO ISSUES: 1) THE PAPER IS NOT PROPERLY WRAPPED IN THE PLASTIC BAG, EFFECTIVELY WASTING ONE OF THE BAGS. 2) iT'S AS IF THE DELIVERY PERSON DELIBERATLY FINDS THE AREA OF MY DRIVEWAY WHERE WATER COLLECTS IN A RAINSTORM TO DROP THE PAPER. I'VE ATTEMPTED TO COMMUNICATE THIS ISSUE DIRECTLY TO YOUR DELIVERY PERSON(HE SENDS A CHRISTMAS CARD TO GET CHRISTMAS TIPS, NO DOUBT) TO NO AVAIL. i DON'T THINK YOU CAN FIND A WORSE DELIVERY SERVICE. HE DOES'T DESERVE THE JOB, LET ALONE ANY MORE CHRISTMAS TIPS!!!":"Hi, the new watchlist feature does not allow for exporting to excel. This makes the watchlist of limited value. Why not have a simple export to csv option. From: andrew.starkey@outlook.com Logged In: Yes Name: A Star","The Stock Market Diary never posted the June 13 data. It is still showing June 12. Please post yesterday's data ASAP. From: agigante@nyc.rr.com Logged In: Yes Name: Alexander Gigante":"I got this email from you. I have participated in other Barron's Survey's focused on the print magazine and website. After doing this survey, I felt like this survey was completely different. Questions were much more personal in nature and potentially invasive and for purposes of marketing to me versus helping make your products better. If the purpose of this survey was to gather information that will be used to market products to me on a personal basis, then please have all the data responses stricken from your databases. Please confirm in a response. Thank you."
+                </p>
+                <p class="text-muted" id="text4" style="display: none">
+                 "From: hrrcpa@earthlink.net Logged In: Yes Name: H. Rudolf Reckmann":"sub receiving an email that they need to update the credit card but there is no problem with the credit card and it is already updated","I am unable to locate the historical LIBOR information. How can we do that? From: billv@noah-housing.org Logged In: Yes Name: Bill Vanvliet":"10 year charts for asia markets not available or not working. Malaysian stocks charts not working. Please retify.Thanks. From: Kanesonkupp@gmail.com Logged In: No Name: Kaneson","I sign in to my account. When I close chrome and open back up, I have to sign in to my account again. My account was never like this before. Every time I'd open Chrome my log in home page is WSJ and I was always signed in, now, I have to constantlykeep signing back in":"I did not receive my paper at least 4 x this past 6 weeks or thereabouts. I emailed Customer Service with the return message such as a member of our crack team will be in contact. Please delete this autoreply since no one ever follows through and the reply is an insult to my subscription. msg#6598265","I RECEIVED A WET NEWSPAPER TWICE THIS WEEK. tWO ISSUES: 1) THE PAPER IS NOT PROPERLY WRAPPED IN THE PLASTIC BAG, EFFECTIVELY WASTING ONE OF THE BAGS. 2) iT'S AS IF THE DELIVERY PERSON DELIBERATLY FINDS THE AREA OF MY DRIVEWAY WHERE WATER COLLECTS IN A RAINSTORM TO DROP THE PAPER. I'VE ATTEMPTED TO COMMUNICATE THIS ISSUE DIRECTLY TO YOUR DELIVERY PERSON(HE SENDS A CHRISTMAS CARD TO GET CHRISTMAS TIPS, NO DOUBT) TO NO AVAIL. i DON'T THINK YOU CAN FIND A WORSE DELIVERY SERVICE. HE DOES'T DESERVE THE JOB, LET ALONE ANY MORE CHRISTMAS TIPS!!!":"Hi, the new watchlist feature does not allow for exporting to excel. This makes the watchlist of limited value. Why not have a simple export to csv option. From: andrew.starkey@outlook.com Logged In: Yes Name: A Star","The Stock Market Diary never posted the June 13 data. It is still showing June 12. Please post yesterday's data ASAP. From: agigante@nyc.rr.com Logged In: Yes Name: Alexander Gigante":"I got this email from you. I have participated in other Barron's Survey's focused on the print magazine and website. After doing this survey, I felt like this survey was completely different. Questions were much more personal in nature and potentially invasive and for purposes of marketing to me versus helping make your products better. If the purpose of this survey was to gather information that will be used to market products to me on a personal basis, then please have all the data responses stricken from your databases. Please confirm in a response. Thank you."
+                </p>
+                <p class="text-muted" id="text5" style="display: none">
+                 "I don't find quotes and data for interest rate FUTURES. Symbols that were previously valid to retrieve FUTURES quotes now don't work. From: hrrcpa@earthlink.net Logged In: Yes Name: H. Rudolf Reckmann":"sub receiving an email that they need to update the credit card but there is no problem with the credit card and it is already updated","I am unable to locate the historical LIBOR information. How can we do that? From: billv@noah-housing.org Logged In: Yes Name: Bill Vanvliet":"10 year charts for asia markets not available or not working. Malaysian stocks charts not working. Please retify.Thanks. From: Kanesonkupp@gmail.com Logged In: No Name: Kaneson","I sign in to my account. When I close chrome and open back up, I have to sign in to my account again. My account was never like this before. Every time I'd open Chrome my log in home page is WSJ and I was always signed in, now, I have to constantlykeep signing back in":"I did not receive my paper at least 4 x this past 6 weeks or thereabouts. I emailed Customer Service with the return message such as a member of our crack team will be in contact. Please delete this autoreply since no one ever follows through and the reply is an insult to my subscription. msg#6598265","I RECEIVED A WET NEWSPAPER TWICE THIS WEEK. tWO ISSUES: 1) THE PAPER IS NOT PROPERLY WRAPPED IN THE PLASTIC BAG, EFFECTIVELY WASTING ONE OF THE BAGS. 2) iT'S AS IF THE DELIVERY PERSON DELIBERATLY FINDS THE AREA OF MY DRIVEWAY WHERE WATER COLLECTS IN A RAINSTORM TO DROP THE PAPER. I'VE ATTEMPTED TO COMMUNICATE THIS ISSUE DIRECTLY TO YOUR DELIVERY PERSON(HE SENDS A CHRISTMAS CARD TO GET CHRISTMAS TIPS, NO DOUBT) TO NO AVAIL. i DON'T THINK YOU CAN FIND A WORSE DELIVERY SERVICE. HE DOES'T DESERVE THE JOB, LET ALONE ANY MORE CHRISTMAS TIPS!!!":"Hi, the new watchlist feature does not allow for exporting to excel. This makes the watchlist of limited value. Why not have a simple export to csv option. From: andrew.starkey@outlook.com Logged In: Yes Name: A Star","The Stock Market Diary never posted the June 13 data. It is still showing June 12. Please post yesterday's data ASAP. From: agigante@nyc.rr.com Logged In: Yes Name: Alexander Gigante":"I got this email from you. I have participated in other Barron's Survey's focused on the print magazine and website. After doing this survey, I felt like this survey was completely different. Questions were much more personal in nature and potentially invasive and for purposes of marketing to me versus helping make your products better. If the purpose of this survey was to gather information that will be used to market products to me on a personal basis, then please have all the data responses stricken from your databases. Please confirm in a response. Thank you."
+                </p>
+                <p class="text-muted" id="text6" style="display: none">
+                  "I don't find quotes and data for interest rate FUTURES. Other futures quotes seem to me diminished as well. Symbols that were previously valid to retrieve FUTURES quotes now don't work. From: hrrcpa@earthlink.net Logged In: Yes Name: H. Rudolf Reckmann":"sub receiving an email that they need to update the credit card but there is no problem with the credit card and it is already updated","I am unable to locate the historical LIBOR information. How can we do that? From: billv@noah-housing.org Logged In: Yes Name: Bill Vanvliet":"10 year charts for asia markets not available or not working. Malaysian stocks charts not working. Please retify.Thanks. From: Kanesonkupp@gmail.com Logged In: No Name: Kaneson","I sign in to my account. When I close chrome and open back up, I have to sign in to my account again. My account was never like this before. Every time I'd open Chrome my log in home page is WSJ and I was always signed in, now, I have to constantlykeep signing back in":"I did not receive my paper at least 4 x this past 6 weeks or thereabouts. I emailed Customer Service with the return message such as a member of our crack team will be in contact. Please delete this autoreply since no one ever follows through and the reply is an insult to my subscription. msg#6598265","I RECEIVED A WET NEWSPAPER TWICE THIS WEEK. tWO ISSUES: 1) THE PAPER IS NOT PROPERLY WRAPPED IN THE PLASTIC BAG, EFFECTIVELY WASTING ONE OF THE BAGS. 2) iT'S AS IF THE DELIVERY PERSON DELIBERATLY FINDS THE AREA OF MY DRIVEWAY WHERE WATER COLLECTS IN A RAINSTORM TO DROP THE PAPER. I'VE ATTEMPTED TO COMMUNICATE THIS ISSUE DIRECTLY TO YOUR DELIVERY PERSON(HE SENDS A CHRISTMAS CARD TO GET CHRISTMAS TIPS, NO DOUBT) TO NO AVAIL. i DON'T THINK YOU CAN FIND A WORSE DELIVERY SERVICE. HE DOES'T DESERVE THE JOB, LET ALONE ANY MORE CHRISTMAS TIPS!!!":"Hi, the new watchlist feature does not allow for exporting to excel. This makes the watchlist of limited value. Why not have a simple export to csv option. From: andrew.starkey@outlook.com Logged In: Yes Name: A Star","The Stock Market Diary never posted the June 13 data. It is still showing June 12. Please post yesterday's data ASAP. From: agigante@nyc.rr.com Logged In: Yes Name: Alexander Gigante":"I got this email from you. I have participated in other Barron's Survey's focused on the print magazine and website. After doing this survey, I felt like this survey was completely different. Questions were much more personal in nature and potentially invasive and for purposes of marketing to me versus helping make your products better. If the purpose of this survey was to gather information that will be used to market products to me on a personal basis, then please have all the data responses stricken from your databases. Please confirm in a response. Thank you."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Chart JS -->
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../assets/js/black-dashboard.min.js?v=1.0.0" type="text/javascript"></script>
+    <!-- Black Dashboard DEMO methods, don't include it in your project! -->
+    <script src="../assets/demo/demo.js"></script>
+    <script>
+      var count = 0;
+      function helper() {
+        count++; 
+          var one = document.getElementById("text1");
+          var two = document.getElementById("text2");
+          var three = document.getElementById("text3");
+          var four = document.getElementById("text4");
+          var five = document.getElementById("text5");
+          var six = document.getElementById("text5");
+          if (count == 1) {
+              one.style.display = "block";
+              two.style.display = "none";
+              three.style.display = "none";
+              four.style.display = "none";
+              five.style.display = "none";
+              six.style.display = "none";
+          } 
+          else if (count == 2) {
+              one.style.display = "none";
+              two.style.display = "block";
+              three.style.display = "none";
+              four.style.display = "none";
+              five.style.display = "none";
+              six.style.display = "none";
+          }
+          else if (count == 3) {
+              one.style.display = "none";
+              two.style.display = "none";
+              three.style.display = "block";
+              four.style.display = "none";
+              five.style.display = "none";
+              six.style.display = "none";
+          }
+          else if (count == 4) {
+              one.style.display = "none";
+              two.style.display = "none";
+              three.style.display = "none";
+              four.style.display = "block";
+              five.style.display = "none";
+              six.style.display = "none";
+          }
+          else if (count == 5) {
+              one.style.display = "none";
+              two.style.display = "none";
+              three.style.display = "none";
+              four.style.display = "none";
+              five.style.display = "block";
+              six.style.display = "none";
+          }
+          else if (count == 6) {
+              one.style.display = "none";
+              two.style.display = "none";
+              three.style.display = "none";
+              four.style.display = "none";
+              five.style.display = "block";
+              six.style.display = "block";
+              count = 0; 
+          }
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+        $().ready(function() {
+          $sidebar = $('.sidebar');
+          $navbar = $('.navbar');
+
+          $full_page = $('.full-page');
+
+          $sidebar_responsive = $('body > .navbar-collapse');
+          sidebar_mini_active = true;
+          white_color = false;
+
+          window_width = $(window).width();
+
+          fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+          $('.fixed-plugin a').click(function(event) {
+            // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+            if ($(this).hasClass('switch-trigger')) {
+              if (event.stopPropagation) {
+                event.stopPropagation();
+              } else if (window.event) {
+                window.event.cancelBubble = true;
+              }
+            }
+          });
+
+          $('.fixed-plugin .background-color span').click(function() {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+
+            var new_color = $(this).data('color');
+
+            if ($sidebar.length != 0) {
+              $sidebar.attr('data-color', new_color);
+            }
+
+            if ($navbar.length != 0) {
+              $navbar.attr('data-color', new_color);
+            }
+
+            if ($full_page.length != 0) {
+              $full_page.attr('filter-color', new_color);
+            }
+
+            if ($sidebar_responsive.length != 0) {
+              $sidebar_responsive.attr('data-color', new_color);
+            }
+          });
+
+          $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+            var $btn = $(this);
+
+            if (sidebar_mini_active == true) {
+              $('body').removeClass('sidebar-mini');
+              sidebar_mini_active = false;
+              blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+            } else {
+              $('body').addClass('sidebar-mini');
+              sidebar_mini_active = true;
+              blackDashboard.showSidebarMessage('Sidebar mini activated...');
+            }
+
+            // we simulate the window Resize so the charts will get updated in realtime.
+            var simulateWindowResize = setInterval(function() {
+              window.dispatchEvent(new Event('resize'));
+            }, 180);
+
+            // we stop the simulation of Window Resize after the animations are completed
+            setTimeout(function() {
+              clearInterval(simulateWindowResize);
+            }, 1000);
+          });
+
+          $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+            var $btn = $(this);
+
+            if (white_color == true) {
+
+              $('body').addClass('change-background');
+              setTimeout(function() {
+                $('body').removeClass('change-background');
+                $('body').removeClass('white-content');
+              }, 900);
+              white_color = false;
+            } else {
+
+              $('body').addClass('change-background');
+              setTimeout(function() {
+                $('body').removeClass('change-background');
+                $('body').addClass('white-content');
+              }, 900);
+
+              white_color = true;
+            }
+
+
+          });
+
+          $('.light-badge').click(function() {
+            $('body').addClass('white-content');
+          });
+
+          $('.dark-badge').click(function() {
+            $('body').removeClass('white-content');
+          });
+        });
+      });
+    </script>
+</body>
+
+</html>
